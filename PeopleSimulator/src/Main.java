@@ -6,7 +6,7 @@ class Main {
 		Society peopleTown = new Society(10000);
 
         //gets the name of the person in the people arrayList at position 8000
-        System.out.println(peopleTown.people.get(8000).getName());
+        System.out.println("hello " + peopleTown.people.get(7000).getAge());
 	}
 
 }

@@ -32,5 +32,5 @@ class Person {
 	public void hadBirthday() {
 		age++;
 	}
-
+// a single comment
 }

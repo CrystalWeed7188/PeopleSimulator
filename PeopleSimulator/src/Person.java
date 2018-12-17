@@ -1,6 +1,8 @@
 class Person {
 	public int age;
 	private String name;
+    private String govRole;
+    
 
 	public Person(int age, String name) {
 		this.name = name;

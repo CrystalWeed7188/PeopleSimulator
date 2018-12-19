@@ -1,8 +1,8 @@
 class Person {
 	public int age;
 	private String name;
-    private String govRole;
-    
+    //private String govRole;
+
 
 	public Person(int age, String name) {
 		this.name = name;
@@ -34,5 +34,5 @@ class Person {
 	public void hadBirthday() {
 		age++;
 	}
-// a single comment
+
 }

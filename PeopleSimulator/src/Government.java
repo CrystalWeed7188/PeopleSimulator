@@ -1,16 +1,19 @@
 class Government{
 //instance variables and make one for laws when ready
-private double  taxRate;
+
+
 //rename gov type variable
 private GovType govEnforcement;
 
 
 
 //constructer
-public Government(double taxRate){
+public Government(){
 
 }
 
+//somewhere randomly select different candidates and roles for gov
+//gotta somehow do voting? Probably will take candidates and randomly select the two from same party
 
 //getters and setters
 
@@ -28,24 +31,6 @@ public GovType getGovEnforcement() {
  */
 public void setGovEnforcement(GovType govEnforcement) {
 	this.govEnforcement = govEnforcement;
-}
-
-
-
-/**
- * @return the taxRate
- */
-public double getTaxRate() {
-	return taxRate;
-}
-
-
-
-/**
- * @param taxRate the taxRate to set
- */
-public void setTaxRate(double taxRate) {
-	this.taxRate = taxRate;
 }
 
 

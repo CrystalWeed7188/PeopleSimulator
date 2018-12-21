@@ -3,7 +3,7 @@ import java.util.*;
 class Society{
 	//this declares a new instance variable... an ArrayList for people
 	List<Person> people = new ArrayList<Person>();
-  
+
 	public int population;
 	//these names came from https://nameberry.com/unisex-names
 	private String[] firstNames = {"Avery","Riley","Jordan","Angel","Parker","Sawyer","Peyton","Quinn","Blake","Hayden","Taylor","Dakota","Reese","Zion","Remmington","Amari","Phoenix","Kendall","Harley","Rylan","Marley","Dallas"};
@@ -16,8 +16,9 @@ class Society{
 			fullName = firstNames[(int)(Math.random()*firstNames.length)] + " " + lastNames[(int)(Math.random()*lastNames.length)];
 			people.add(new Person((int)(Math.random()*100),fullName));
 		}
+
 	}
-//maybe put get role in here like how names are assigned.
+
 
 }
 

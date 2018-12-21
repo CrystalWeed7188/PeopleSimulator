@@ -95,4 +95,4 @@ public void militarySpendingAmount(double income){
 
 }
 
-}g
+}

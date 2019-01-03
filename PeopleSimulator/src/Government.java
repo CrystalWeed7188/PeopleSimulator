@@ -4,17 +4,19 @@ private double taxRate;
 private int militarySpending;
 private int educationSpending;
 private int healthCareSpending;
-private int infrastructureSpending;
-private int federalReserve;
+private int socialSecuritySpending;
+private double federalReserve;
+private int miscellaneousSpending;
 
 
 //constructer
-public Government(double taxRate, int militarySpending, int educationSpending, int healthCareSpending, int infrastructureSpending){
+public Government(double taxRate, int militarySpending, int educationSpending, int healthCareSpending, int socialSecuritySpending, int miscellaneousSpending){
 this.taxRate = taxRate;
 this.setMilitarySpending(militarySpending);
 this.setEducationSpending(educationSpending);
 this.setHealthCareSpending(healthCareSpending);
-this.setInfrastructureSpending(infrastructureSpending);
+this.setSocialSecuritySpending(socialSecuritySpending);
+this.setMiscellaneousSpending(miscellaneousSpending);
 setFederalReserve(169000000);
 }
 
@@ -22,20 +24,28 @@ setFederalReserve(169000000);
 
 //getters and setters
 
-public int getFederalReserve() {
+public int getMiscellaneousSpending() {
+	return miscellaneousSpending;
+}
+
+public void setMiscellaneousSpending(int miscellaneousSpending) {
+	this.miscellaneousSpending = miscellaneousSpending;
+}
+
+public double getFederalReserve() {
 	return federalReserve;
 }
 
-public void setFederalReserve(int federalReserve) {
+public void setFederalReserve(double federalReserve) {
 	this.federalReserve = federalReserve;
 }
 
-public int getInfrastructureSpending() {
-	return infrastructureSpending;
+public int getSocialSecuritySpending() {
+	return socialSecuritySpending;
 }
 
-public void setInfrastructureSpending(int infrastructureSpending) {
-	this.infrastructureSpending = infrastructureSpending;
+public void setSocialSecuritySpending(int socialSecuritySpending) {
+	this.socialSecuritySpending = socialSecuritySpending;
 }
 
 public int getHealthCareSpending() {
@@ -75,24 +85,28 @@ public void setTaxRate(double taxRate) {
 public void taxAssignment(double income){
 
 //will I make different tax rates for income levels? Probably account for single and married?
+// cycles money to federal federalReserve
+//Idk how taxes actually work btw
 
     if(income > 0 &&  income < 10000){
         taxRate = .10;
+        federalReserve += income*.1;
+
     }else if (income > 10000 &&  income < 38000){
         taxRate = .12;
+        federalReserve += income*.12;
+
     } else if(income > 38000 &&  income < 82000){
         taxRate = .22;
+        federalReserve += income*.22;
+
     } else{
         taxRate = .30;
+        federalReserve += income*.3;
     }
 
   }
 
-//war, new tech, paying dem bois
-public void militarySpendingAmount(double income){
 
-
-
-}
 
 }

@@ -1,14 +1,23 @@
 class Person {
 	public int age;
 	private String name;
-    private String govRole;
+    private double income;
     //private String govRole;
 
 
-	public Person(int age, String name) {
+	public Person(int age, String name, double income) {
 		this.name = name;
 		this.age = age;
+        this.setIncome(income);
 
+	}
+
+	public double getIncome() {
+		return income;
+	}
+
+	public void setIncome(double income) {
+		this.income = income;
 	}
 
 	public Person() {
@@ -29,9 +38,6 @@ class Person {
 		return name;
 	}
 
-    public String getGovRole(){
-        return govRole;
-    }
 
 	public int getAge() {
 		return age;

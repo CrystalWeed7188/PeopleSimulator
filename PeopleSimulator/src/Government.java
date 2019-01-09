@@ -31,7 +31,8 @@ public void setTaxRate(double taxRate) {
 
 
 //methods
-public void taxAssignment(double income, double taxRateMultiplier){
+public void taxAssignment(double income){
+double taxRateMultiplier;
 
 //will I make different tax rates for income levels? Probably account for single and married?
 // cycles money to federal federalReserve
@@ -40,22 +41,26 @@ public void taxAssignment(double income, double taxRateMultiplier){
     if(income > 0 &&  income < 10000){
         taxRateMultiplier = taxRate + .005;
         federalReserve += income*taxRateMultiplier;
+        income -= income*taxRateMultiplier;
 
     }else if (income > 10000 &&  income < 38000){
         taxRateMultiplier = taxRate + .01;
         federalReserve += income*taxRateMultiplier;
+       income -= income*taxRateMultiplier;
 
     } else if(income > 38000 &&  income < 82000){
          taxRateMultiplier = taxRate + .015;
         federalReserve += income*taxRateMultiplier;
+       income -= income*taxRateMultiplier;
 
     } else{
          taxRateMultiplier = taxRate + .02;
         federalReserve += income*taxRateMultiplier;
-    }
+        income -= income*taxRateMultiplier;
 
-  }
+     }
 
 
+ }
 
 }

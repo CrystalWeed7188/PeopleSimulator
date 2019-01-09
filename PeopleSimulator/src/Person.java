@@ -2,14 +2,25 @@ class Person {
 	public int age;
 	private String name;
     private double income;
-    //private String govRole;
+    private double incomeUntaxed;
+
 
 
 	public Person(int age, String name, double income) {
 		this.name = name;
 		this.age = age;
         this.setIncome(income);
+        this.setIncomeUntaxed(income);
+	}
 
+
+	public double getIncomeUntaxed() {
+		return incomeUntaxed;
+	}
+
+
+	public void setIncomeUntaxed(double incomeUntaxed) {
+		this.incomeUntaxed = incomeUntaxed;
 	}
 
 	public double getIncome() {

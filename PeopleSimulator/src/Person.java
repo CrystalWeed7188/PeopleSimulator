@@ -10,17 +10,6 @@ class Person {
 		this.name = name;
 		this.age = age;
         this.setIncome(income);
-        this.setIncomeUntaxed(income);
-	}
-
-
-	public double getIncomeUntaxed() {
-		return incomeUntaxed;
-	}
-
-
-	public void setIncomeUntaxed(double incomeUntaxed) {
-		this.incomeUntaxed = incomeUntaxed;
 	}
 
 	public double getIncome() {

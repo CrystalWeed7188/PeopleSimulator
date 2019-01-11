@@ -5,7 +5,7 @@ private double federalReserve;
 
 
 //constructer
-public Government(double taxRate){
+public Government(double taxRate ){
 this.taxRate = taxRate;
 setFederalReserve(169000000);
 }
@@ -34,9 +34,9 @@ public void setTaxRate(double taxRate) {
 public double taxAssignment(double income){
 double taxRateMultiplier;
 
-//will I make different tax rates for income levels? Probably account for single and married?
-// cycles money to federal federalReserve
-//Idk how taxes actually work btw so its a progressive tax
+    // cycles money to federal federalReserve
+    //Idk how taxes actually work btw so its a progressive tax
+    //this takes a users income and applies a tax to it returning the taxed income
 
     if(income > 0 &&  income < 10000){
         taxRateMultiplier = taxRate + .005;
@@ -61,6 +61,7 @@ double taxRateMultiplier;
      }
 
 
- }
+}
 
+//this parenthesis it to the class I just keep forgetting
 }

@@ -1,30 +1,26 @@
+import java.util.*;
 class Person {
 	public int age;
 	private String name;
     private double income;
-    private double incomeUntaxed;
+    public String place;
+    public int thisPopulation;
 
 
 
-	public Person(int age, String name, double income) {
+	public Person(int age, String name,String place,double income) {
 		this.name = name;
 		this.age = age;
+         this.place = place;
         this.setIncome(income);
 	}
 
-	public double getIncome() {
-		return income;
-	}
-
-	public void setIncome(double income) {
-		this.income = income;
-	}
 
 	public Person() {
 		this.name = "Brad";
 		this.age = 37;
 	}
-
+    
 	public boolean olderThan(int otherAge) {
 		if (age > otherAge) {
 			return true;
@@ -46,5 +42,31 @@ class Person {
 	public void hadBirthday() {
 		age++;
 	}
+
+    //-----------------------------------------------------------------
+    //Places
+
+    public String getPlace(){
+         return this.place;
+    }
+
+    public String changePlaceTo(String newPlace){
+         this.place = newPlace;
+         return ("Person " + this.name + "moved to " + newPlace);
+    }
+
+
+    //-----------------------------------------------------------
+    //sets a random income so government can test taxes untill people that are doing money finish
+
+    public double getIncome() {
+		return income;
+	}
+
+	public void setIncome(double income) {
+		this.income = income;
+
+    }
+
 
 }

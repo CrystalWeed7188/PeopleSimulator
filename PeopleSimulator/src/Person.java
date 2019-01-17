@@ -1,18 +1,18 @@
-import java.util.*;
+
 class Person {
 	public int age;
 	private String name;
     private double income;
-    public String place;
+    public Place place;
     public int thisPopulation;
 
 
 
-	public Person(int age, String name,String place,double income) {
+	public Person(int age, String name,Place place,double income) {
 		this.name = name;
 		this.age = age;
          this.place = place;
-        this.setIncome(income);
+         this.income = income;
 	}
 
 
@@ -20,7 +20,7 @@ class Person {
 		this.name = "Brad";
 		this.age = 37;
 	}
-    
+
 	public boolean olderThan(int otherAge) {
 		if (age > otherAge) {
 			return true;
@@ -47,10 +47,10 @@ class Person {
     //Places
 
     public String getPlace(){
-         return this.place;
+         return place.getPlace();
     }
 
-    public String changePlaceTo(String newPlace){
+    public String changePlaceTo(Place newPlace){
          this.place = newPlace;
          return ("Person " + this.name + "moved to " + newPlace);
     }
@@ -67,6 +67,8 @@ class Person {
 		this.income = income;
 
     }
+
+
 
 
 }

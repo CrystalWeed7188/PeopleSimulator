@@ -25,12 +25,12 @@ class Society{
 		for(int i = 0; i < numPeople; i++){
             //First Place Butts Creek!
             fullName = firstNames[(int)(Math.random()*firstNames.length)] + " " + lastNames[(int)(Math.random()*lastNames.length)];
-            people.add(new Person((int)(Math.random()*100),fullName, places.get((int) (Math.random()*places.size())).getPlace(),(int)(Math.random()*100000)));
+            people.add(new Person((int)(Math.random()*100),fullName, places.get((int) (Math.random()*places.size())),(int)(Math.random()*100000)));
 
         }
 
 	}
-    
+
     public int populationOf(Society society,String PlaceName){
         ArrayList<String> placedata = new ArrayList<String>();
         //finds the total population

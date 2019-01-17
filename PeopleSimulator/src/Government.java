@@ -35,7 +35,7 @@ public double taxAssignment(double income){
 double taxRateMultiplier;
 
     // cycles money to federal federalReserve
-    //Idk how taxes actually work btw so its a progressive tax
+    //Idk how taxes actually work btw so its a progressive tax?
     //this takes a users income and applies a tax to it returning the taxed income
 
     if(income > 0 &&  income < 10000){

@@ -1,6 +1,6 @@
 import java.util.*;
 
-//note to self next class sync stuff so I have everyones stuff
+
 class Society{
 	// this declares a new instance variable... an ArrayList for people
 	List<Person> people = new ArrayList<Person>();
@@ -17,12 +17,13 @@ class Society{
     private String[] govNames ={"Dictatorship", "Absolute Monarchy", "Constitutional Monarchy", "Communism", "Representative Democracy", "Direct Democracy"};
 
     Society(int numPeople){
-
 		String fullName;
+        
         //this randomly generates only 5 towns to start with.
         for(int i = 0; i < 5; i++){
             places.add(new Place(lastNames[(int)(Math.random()*lastNames.length)]+placeNames[(int)(Math.random()*placeNames.length)]+ govNames[(int)(Math.random()*govNames.length)]));
         }
+
 		for(int i = 0; i < numPeople; i++){
             //First Place Butts Creek!
             fullName = firstNames[(int)(Math.random()*firstNames.length)] + " " + lastNames[(int)(Math.random()*lastNames.length)];

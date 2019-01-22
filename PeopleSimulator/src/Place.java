@@ -7,7 +7,10 @@ class Place {
     public Place(String name){
         this.name = name;
     }
-    public String getPlace(){
-        return name;
+    public Place getPlace(){
+        return this;
+
     }
+
+
 }

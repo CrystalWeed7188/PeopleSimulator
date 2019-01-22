@@ -1,16 +1,35 @@
-import java.util.*;
+
 class Main {
 	public static void main(String[] args) {
-		Society peopleTown = new Society(10000);
-
-
-        //i just want this to run somehow
-
-                System.out.println(peopleTown.people.get(100).getName()  + " " + "income = " + peopleTown.people.get(100).getIncome() + " " + "Income Taxed " +  peopleTown.people.get(100).place.govOfPlace.taxAssignment(peopleTown.people.get(100).getIncome()));
+		Society peopleTown = new Society(50);
 
 
 
 
-    }
+      for(int i = 0; i < 50; i++) {
+        peopleTown.cycleDay();
+        //Write your print/tests in here if your feature should happen on a dialy basis
+            System.out.println(peopleTown.people.get(i).getName() + " age = " + peopleTown.people.get(i).getAge() + " Depressed = " + peopleTown.people.get(i).getDepressed() + " Optimistic = " + peopleTown.people.get(i).getOptimistic() +" Happiness = " + peopleTown.people.get(i).setHappiness() + "%");
 
+             System.out.println(" Societal Happiness = " + peopleTown.societalHappiness() +"% ");
+
+        }
+
+      for(Person individual : peopleTown.people){
+          //This is a test of the people who got married
+          if(individual.getSpouse() != null){
+              System.out.println(individual.getName() + " married to " + individual.getSpouse().getName() );
+              System.out.println(individual.getSpouse().getName() + " is married to " + individual.getName());
+          }
+          //Write your print/tests below if they involve a property of the people in peopleTown
+          //use individual as it does in the example above
+          //shows government class
+            System.out.println(individual.getName()  + " " + "income = " + individual.getIncome() + " " + "Income Taxed " +  individual.place.govOfPlace.taxAssignment(individual.getIncome()));
+        }
+
+	}
+
+
+
+    // This is the Places Code- Need help? Ask Brandon, Ian, or read the documentation provided.
 }

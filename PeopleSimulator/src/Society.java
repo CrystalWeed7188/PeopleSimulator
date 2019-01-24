@@ -37,7 +37,7 @@ public int societalHappiness(){
   String fullName;
   String gender;
   for(int i = 0; i < 5; i++){
-            places.add(new Place(lastNames[(int)(Math.random()*lastNames.length)]+placeNames[(int)(Math.random()*placeNames.length)]));
+            places.add(new Place(lastNames[(int)(Math.random()*lastNames.length)]+placeNames[(int)(Math.random()*placeNames.length)], govNames[(int)(Math.random()*govNames.length)]));
         }
   for (int i = 0; i < numPeople; i++) {
    fullName = firstNames[(int)(Math.random() * firstNames.length)] + " " + lastNames[(int)(Math.random() * lastNames.length)];

@@ -23,8 +23,9 @@ class Main {
           }
           //Write your print/tests below if they involve a property of the people in peopleTown
           //use individual as it does in the example above
-          //shows government class
+          //shows government class (taxation)
             System.out.println(individual.getName()  + " " + "income = " + individual.getIncome() + " " + "Income Taxed " +  individual.place.govOfPlace.taxAssignment(individual.getIncome()));
+             System.out.println(individual.getPlace()) ;
         }
 
 	}

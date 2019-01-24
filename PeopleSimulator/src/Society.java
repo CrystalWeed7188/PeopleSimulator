@@ -17,7 +17,7 @@ class Society{
 
     // this is the places array: its contains all the places, in which people can live.
     private String[] placeNames = {"burg", "ton", "burgh", "town", " City", "ville", " Center"," Lake", "wood","ford","land","house","hill","bridge"," Creek", "boro"};
-    private String[] govNames ={"Dictatorship", "Absolute Monarchy", "Constitutional Monarchy", "Communism", "Representative Democracy", "Direct Democracy"};
+    //private String[] govNames ={"Dictatorship", "Absolute Monarchy", "Constitutional Monarchy", "Communism", "Representative Democracy", "Direct Democracy"};
 
 
 
@@ -37,7 +37,7 @@ public int societalHappiness(){
   String fullName;
   String gender;
   for(int i = 0; i < 5; i++){
-            places.add(new Place(lastNames[(int)(Math.random()*lastNames.length)]+placeNames[(int)(Math.random()*placeNames.length)], govNames[(int)(Math.random()*govNames.length)]));
+            places.add(new Place(lastNames[(int)(Math.random()*lastNames.length)]+placeNames[(int)(Math.random()*placeNames.length)]));
         }
   for (int i = 0; i < numPeople; i++) {
    fullName = firstNames[(int)(Math.random() * firstNames.length)] + " " + lastNames[(int)(Math.random() * lastNames.length)];
